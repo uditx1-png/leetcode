@@ -1,0 +1,43 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+string sortSentence(string s){
+    vector<string>ans(10);
+    string temp;
+    int count=0;
+    int index=0;
+    while(index<s.size()){
+        if(s[index]==' '){
+            int pos=temp[temp.size()-1]-'0';
+            temp.pop_back();
+            ans[pos]=temp;
+            temp.clear();
+            count++;
+            index++;
+        }
+        else{
+            temp+=s[index];
+            index++;
+        }
+    }
+
+    // store last word
+    int pos = temp[temp.size()-1] - '0';
+    temp.pop_back();
+    ans[pos] = temp;
+    temp.clear();
+
+    for(int i=1;i<=count+1;i++){
+        temp+=ans[i];
+        temp+=' ';
+    }
+    temp.pop_back();
+    return temp;
+}
+int main(){
+    string s;
+    cout<<"enter the string = ";
+    getline(cin, s);
+    cout<<sortSentence(s)<<endl;
+    return 0;
+}
