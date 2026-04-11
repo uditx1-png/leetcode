@@ -19,6 +19,22 @@ void rotate(vector<vector<int>>& matrix){
             end--;
         }
     }
+    // // this is for 180 rotation
+    
+    // for(int i=0;i<n;i++){
+    //     for(int j=i+1;j<n;j++){
+    //         swap(matrix[i][j],matrix[j][i]);
+    //     }
+    // }
+    // // reveerse
+    // for(int i=0;i<n;i++){
+    //     int start=0,end=n-1;
+    //     while(start<end){
+    //         swap(matrix[i][start],matrix[i][end]);
+    //         start++;
+    //         end--;
+    //     }
+    // }
 }
 int main(){
     int r,c;
